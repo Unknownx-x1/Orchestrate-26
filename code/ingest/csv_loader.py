@@ -34,9 +34,26 @@ class DynamicCSVLoader:
             logger.warning(f"Dataset directory '{path}' does not exist.")
             return {}
 
-        csv_files = list(path.glob("*.csv")) + list(path.glob("**/*.csv"))
+        # Prioritize top-level CSV files in the target directory
+        top_level_csvs = [
+            f for f in path.glob("*.csv") 
+            if not f.stem.lower().startswith("output") and not f.stem.lower().endswith("output")
+        ]
+        
+        if top_level_csvs:
+            csv_files = top_level_csvs
+        else:
+            # If no top-level CSVs, search subdirectories excluding fixtures and cache
+            csv_files = [
+                f for f in path.rglob("*.csv")
+                if not f.stem.lower().startswith("output") 
+                and not f.stem.lower().endswith("output")
+                and "fixtures" not in f.parts
+                and ".cache" not in f.parts
+            ]
+
         # Deduplicate files by absolute resolved path
-        unique_files = {f.resolve(): f for f in csv_files}.values()
+        unique_files = list({f.resolve(): f for f in csv_files}.values())
         
         logger.info(f"Discovered {len(unique_files)} CSV files in '{path}'.")
 

@@ -24,6 +24,8 @@ class FXEngine:
         "AUD": 0.65,
         "INR": 0.012,
         "JPY": 0.0067,
+        "IDR": 0.000062,
+        "ZAR": 0.055,
     }
 
     def __init__(self, custom_rates: Optional[Dict[str, float]] = None):
