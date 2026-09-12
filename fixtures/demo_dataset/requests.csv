@@ -1,0 +1,4 @@
+request_id,user_id,amount,request_date,deadline,allow_partial,notes
+req_01_macbook,usr_alpha_1,1200.0,2026-09-15,2026-10-15,false,Work laptop upgrade
+req_02_medical,usr_beta_2,600.0,2026-09-15,2026-10-30,true,Urgent dental procedure. Partial payment allowed.
+req_03_vacation,usr_gamma_3,500.0,2026-09-15,2026-11-01,false,Weekend travel package

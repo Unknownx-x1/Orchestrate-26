@@ -1,0 +1,8 @@
+event_id,user_id,category,name,amount,currency,is_recurring,recurrence_interval,start_date,is_flexible,image_id
+ev_salary_alpha,usr_alpha_1,income,Monthly Salary,3000.0,USD,true,monthly,2026-09-30,false,
+ev_rent_alpha,usr_alpha_1,expense,Apartment Rent,1000.0,USD,true,monthly,2026-09-20,false,
+ev_gym_beta,usr_beta_2,expense,Gym Membership,80.0,USD,true,monthly,2026-09-18,true,
+ev_streaming_beta,usr_beta_2,expense,Streaming Bundle,30.0,USD,true,monthly,2026-09-19,true,
+ev_salary_beta,usr_beta_2,income,Bi-Weekly Paycheck,1200.0,USD,true,biweekly,2026-09-25,false,
+ev_car_gamma,usr_gamma_3,expense,Auto Insurance,150.0,USD,true,monthly,2026-09-22,false,
+ev_utility_blank,usr_gamma_3,expense,Utility Invoice,,USD,false,none,2026-09-25,false,receipt_sample

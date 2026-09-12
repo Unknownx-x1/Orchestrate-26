@@ -1,0 +1,4 @@
+user_id,current_balance,minimum_balance_to_keep,home_currency,payment_preferences
+usr_alpha_1,2500.0,500.0,USD,full_upfront;installment
+usr_beta_2,800.0,300.0,USD,installment
+usr_gamma_3,400.0,200.0,USD,installment

@@ -1,0 +1,3 @@
+message_id,user_id,event_id,body,timestamp
+msg_01,usr_beta_2,ev_gym_beta,"Notice: Your gym membership fee has been amended to $70.00 starting next cycle.","2026-09-14"
+msg_02,usr_alpha_1,,"System Notification: Please note that all transactions are processed securely.","2026-09-15"

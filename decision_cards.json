@@ -1,0 +1,135 @@
+[
+  {
+    "request_id": "req_01_macbook",
+    "user_id": "usr_alpha_1",
+    "requested_amount": 1200.0,
+    "selected_plan": {
+      "plan_id": "plan_001bb186",
+      "plan_type": "wait",
+      "payment_option_id": null,
+      "payment_method": "delayed_full",
+      "total_paid": 1200.0,
+      "start_date": "2026-09-30",
+      "completion_date": "2026-09-30",
+      "spending_interventions": [],
+      "is_safe": true,
+      "completes_before_deadline": true,
+      "schedule": {
+        "2026-09-30": 1200.0
+      },
+      "rejection_reasons": []
+    },
+    "verifier_result": {
+      "passed": true,
+      "violations": [],
+      "min_balance_observed": 3300.0,
+      "isolated_simulation_safe": true,
+      "binding_constraints": []
+    },
+    "amount_safe_to_pay": 1000.0,
+    "earliest_safe_date": "2026-09-30",
+    "rejected_candidates": [
+      {
+        "plan_id": "plan_d91995e2",
+        "reasons": [
+          "MINIMUM_BALANCE_BREACH"
+        ]
+      },
+      {
+        "plan_id": "plan_4c8b905f",
+        "reasons": [
+          "DEADLINE_EXCEEDED"
+        ]
+      }
+    ],
+    "binding_constraints": []
+  },
+  {
+    "request_id": "req_02_medical",
+    "user_id": "usr_beta_2",
+    "requested_amount": 600.0,
+    "selected_plan": {
+      "plan_id": "plan_e844d600",
+      "plan_type": "partial",
+      "payment_option_id": null,
+      "payment_method": "partial_payment",
+      "total_paid": 400.0,
+      "start_date": "2026-09-15",
+      "completion_date": "2026-09-15",
+      "spending_interventions": [],
+      "is_safe": true,
+      "completes_before_deadline": true,
+      "schedule": {
+        "2026-09-15": 400.0
+      },
+      "rejection_reasons": []
+    },
+    "verifier_result": {
+      "passed": true,
+      "violations": [],
+      "min_balance_observed": 300.0,
+      "isolated_simulation_safe": true,
+      "binding_constraints": [
+        "LIQUIDITY_BUFFER_TIGHT"
+      ]
+    },
+    "amount_safe_to_pay": 400.0,
+    "earliest_safe_date": "2026-09-25",
+    "rejected_candidates": [
+      {
+        "plan_id": "plan_e02cc54a",
+        "reasons": [
+          "MINIMUM_BALANCE_BREACH"
+        ]
+      }
+    ],
+    "binding_constraints": [
+      "LIQUIDITY_BUFFER_TIGHT"
+    ]
+  },
+  {
+    "request_id": "req_03_vacation",
+    "user_id": "usr_gamma_3",
+    "requested_amount": 500.0,
+    "selected_plan": {
+      "plan_id": "plan_b5c1b5f9",
+      "plan_type": "wait",
+      "payment_option_id": null,
+      "payment_method": "delayed_full",
+      "total_paid": 500.0,
+      "start_date": "2026-09-25",
+      "completion_date": "2026-09-25",
+      "spending_interventions": [],
+      "is_safe": true,
+      "completes_before_deadline": true,
+      "schedule": {
+        "2026-09-25": 500.0
+      },
+      "rejection_reasons": []
+    },
+    "verifier_result": {
+      "passed": true,
+      "violations": [],
+      "min_balance_observed": Infinity,
+      "isolated_simulation_safe": true,
+      "binding_constraints": []
+    },
+    "amount_safe_to_pay": 50.0,
+    "earliest_safe_date": "2026-09-25",
+    "rejected_candidates": [
+      {
+        "plan_id": "plan_557d5af6",
+        "reasons": [
+          "MINIMUM_BALANCE_BREACH"
+        ]
+      },
+      {
+        "plan_id": "plan_4ab634e3",
+        "reasons": [
+          "MINIMUM_BALANCE_BREACH"
+        ]
+      }
+    ],
+    "binding_constraints": []
+  }
+]

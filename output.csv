@@ -1,0 +1,4 @@
+request_id,status,recommended_payment_option_id,recommended_payment_method,amount_safe_to_pay,earliest_safe_full_payment_date,payment_schedule,spending_interventions,explanation
+req_01_macbook,APPROVED,none,delayed_full,1000.0,2026-09-30,2026-09-30: 1200.00,none,"Request req_01_macbook was approved for a total payment of $1200.00 using the delayed_full method, with no constraints or interventions noted."
+req_02_medical,PARTIALLY_APPROVED,none,partial_payment,400.0,2026-09-25,2026-09-15: 400.00,none,"Request req_02_medical was partially approved with a $400.00 payment, however, liquidity constraints prevented full approval and necessitated a partial payment approach."
+req_03_vacation,APPROVED,none,delayed_full,50.0,2026-09-25,2026-09-25: 500.00,none,"Request req_03_vacation was approved for a total payment of $500.00 via a delayed full schedule, with no constraints or interventions noted."

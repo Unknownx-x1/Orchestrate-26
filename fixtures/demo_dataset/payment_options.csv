@@ -1,0 +1,4 @@
+payment_option_id,request_id,payment_method,num_installments,installment_amount,interval_days
+opt_bnpl_3x_alpha,req_01_macbook,installment,3,400.0,30
+opt_bnpl_4x_beta,req_02_medical,installment,4,150.0,14
+opt_bnpl_2x_gamma,req_03_vacation,installment,2,250.0,30
