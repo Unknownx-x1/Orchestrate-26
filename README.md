@@ -1,4 +1,4 @@
-# Antigravity — Financial Digital Twin & Counterfactual Planning Engine
+#  Financial Digital Twin & Counterfactual Planning Engine
 
 > **Gemma 4:2B + Ollama Edition | Build Specification Implementation**
 
