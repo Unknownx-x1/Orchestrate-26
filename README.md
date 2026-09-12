@@ -1,4 +1,4 @@
-#  Financial Digital Twin & Counterfactual Planning Engine
+# Financial Digital Twin & Counterfactual Planning Engine
 
 > **Gemma 4:2B + Ollama Edition | Build Specification Implementation**
 
@@ -8,7 +8,9 @@
 
 Affordability is a **constrained temporal simulation problem**, not an LLM generative question. Models are uniquely suited for interpreting unstructured human language, invoices, and conflicting evidence; deterministic software reconstructs the user's financial state, simulates counterfactual cash flows, enforces invariant constraints, ranks viable payment plans, and independently certifies safety.
 
-$$\text{Pipeline: Evidence} \longrightarrow \text{Financial Twin} \longrightarrow \text{Temporal Futures} \longrightarrow \text{Candidate Plans} \longrightarrow \text{Optimization} \longrightarrow \text{Independent Proof} \longrightarrow \text{Explanation}$$
+```
+Evidence ──> Financial Twin ──> Temporal Futures ──> Candidate Plans ──> Optimization ──> Independent Proof ──> Explanation
+```
 
 ---
 
@@ -20,9 +22,11 @@ $$\text{Pipeline: Evidence} \longrightarrow \text{Financial Twin} \longrightarro
 1. **Zero-Hardcoding Architecture**: Every row, ID, amount, and option is discovered dynamically at runtime. Replacing the dataset with another structurally compatible dataset runs completely unchanged.
 2. **Evidence Firewall**: External messages, receipts, and images are strictly untrusted data. Embedded instructions or prompt injections are neutralized and cannot alter system rules or arithmetic.
 3. **Deterministic Financial Physics**: Evaluates daily cash flows over a 90-day horizon:
-   $$\text{balance}[t] = \text{balance}[t-1] + \text{confirmed\_inflows}[t] - \text{protected\_outflows}[t] - \text{candidate\_payments}[t]$$
-   Ensuring: $\min_{t \in [0, 90]}(\text{balance}[t]) \ge \text{minimum\_balance\_to\_keep}$.
-4. **Algorithmic Binary Search**: Calculates the exact `amount_safe_to_pay` today via binary search on $[0, \text{requested\_amount}]$ rather than guessing.
+   ```
+   balance[t] = balance[t-1] + confirmed_inflows[t] - protected_outflows[t] - candidate_payments[t]
+   ```
+   Ensuring: `min(balance[t]) >= minimum_balance_to_keep` for every forecast day `t` in `[0, 90]`.
+4. **Algorithmic Binary Search**: Calculates the exact `amount_safe_to_pay` today via binary search on `[0, requested_amount]` rather than guessing.
 5. **Spending Interventions**: Formally models flexible recurring expenses as explicit adjustments (`stop:<event_id>`, `reduce_to:<event_id>:<new_amount>`), searching for the minimal changes needed to restore safety (max 3, mutual exclusion enforced).
 6. **Independent Safety Verifier + Repair Loop**: Certified by an isolated certifying simulator clone before output generation. The model never certifies its own decisions.
 
